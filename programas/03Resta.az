@@ -1,0 +1,5 @@
+programa Resta;
+inicio
+    numero resultado = 8 - 2;
+    escrever("Resta: " + resultado);
+fim

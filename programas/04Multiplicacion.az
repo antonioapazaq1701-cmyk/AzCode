@@ -1,0 +1,5 @@
+programa Multiplicacion;
+inicio
+    numero resultado = 8 * 2;
+    escrever("Multiplicación: " + resultado);
+fim

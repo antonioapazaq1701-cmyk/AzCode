@@ -1,0 +1,5 @@
+programa Promedio;
+inicio
+    numero resultado = (12 + 18) / 2;
+    escrever("Promedio: " + resultado);
+fim

@@ -1,0 +1,19 @@
+programa Ejemplo;
+inicio
+    funcao doble(valor) = valor * 2;
+    funcao sumar(primero, segundo) = primero + segundo;
+    numero edad = ler("Escribe tu edad: ");
+    texto nombre = ler("Escribe tu nombre: ");
+    booleano estudiante = ler("¿Eres estudiante? verdadeiro o falso: ");
+    booleano mayor = edad >= 18;
+    escrever("Hola, " + nombre);
+    escrever("Doble de tu edad: " + doble(edad));
+    escrever("Suma: " + sumar(3, 5));
+    escrever("Potencia: " + potencia(2, 3));
+    escrever("También potencia: " + 2 ** 3);
+    escrever("Raíz: " + raiz(25));
+    escrever("Resto: " + 10 % 3);
+    escrever("Mayor de edad: " + mayor);
+    escrever("Mayor y estudiante: " + (mayor e estudiante));
+    escrever("No estudiante: " + (nao estudiante));
+fim

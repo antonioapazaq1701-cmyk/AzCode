@@ -1,0 +1,5 @@
+programa nose;
+inicio
+    texto nombre = ler("Tu nombre: ");
+    escrever("Hola, " + nombre);    
+fim

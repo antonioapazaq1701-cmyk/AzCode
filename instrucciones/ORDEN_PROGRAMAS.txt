@@ -1,0 +1,48 @@
+AZCODE: PROGRAMAS EN ORDEN DE APRENDIZAJE
+
+Abre los archivos de programas en orden, del 01 al 22.
+Los números pertenecen al nombre del archivo; las instrucciones del lenguaje no cambian.
+
+EJECUTAR EL PRIMER EJEMPLO
+python -B src/main.py programas/01HolaMundo.az
+
+También puedes usar el botón de ejecutar de VS Code o elegir de la lista:
+python -B ExtrasAI/runner.py
+
+01-07: mensajes y operaciones matemáticas.
+08-12: entrada de datos y ejemplos con varias variables.
+13-15: booleanos y funciones.
+16-19: repeticiones y acumuladores.
+20-22: opciones, calculadora y menú con repetición.
+
+01HolaMundo.az: Mostrar un mensaje en consola.
+02Suma.az: Sumar dos números y guardar el resultado.
+03Resta.az: Restar dos números.
+04Multiplicacion.az: Multiplicar dos números.
+05Division.az: Dividir dos números.
+06Promedio.az: Combinar sumas, paréntesis y división.
+07Potencia.az: Calcular una potencia con potencia y **.
+08Saludo.az: Leer tu nombre y mostrar un saludo.
+09EntradaDeTexto.az: Practicar la lectura de texto con otro saludo.
+10Raiz.az: Leer un número y calcular su raíz cuadrada.
+11OperacionesBasicas.az: Combinar variables, mensajes y varias operaciones.
+12OperacionesDecimales.az: Practicar varias operaciones con decimales.
+13Booleanos.az: Comparar valores y usar verdadeiro, falso y nao.
+14FuncionDoble.az: Crear y llamar una función de una expresión.
+15FuncionesYEntrada.az: Combinar funciones, entrada de datos y booleanos.
+16ContadorPara.az: Repetir una instrucción del 1 al 5 con para.
+17SumaAcumulada.az: Cambiar un total en cada vuelta de un ciclo.
+18TablaMultiplicar.az: Leer un número y repetir para mostrar su tabla.
+19ContadorMientras.az: Repetir con enquanto y actualizar un contador.
+20Opciones.az: Elegir una acción con escolha, caso y padrao.
+21Calculadora.az: Combinar entradas y elecciones; evitar dividir entre cero.
+22MenuRepetido.az: Combinar un ciclo, opciones y un booleano para salir.
+
+En 08 y 09 escribe tu nombre; en 10 escribe 25 para obtener 5.0.
+En 15 escribe 20, Ana y verdadeiro, pulsando Enter después de cada respuesta.
+En 18 escribe 3 para ver su tabla.
+En 20 escribe 1 para saludar o 2 para calcular una raíz.
+En 21 escribe 4, 8 y 2 para dividir 8 entre 2.
+En 22 escribe 1 para saludar y 0 para salir.
+
+Se conservaron todos los ejemplos. EntradaDeTexto corresponde al antiguo nose.az.

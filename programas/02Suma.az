@@ -1,0 +1,5 @@
+programa Suma;
+inicio
+    numero resultado = 8 + 2;
+    escrever("Suma: " + resultado);
+fim

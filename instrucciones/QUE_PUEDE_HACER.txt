@@ -1,0 +1,231 @@
+AZCODE: GUÍA SIMPLE
+
+Para ejecutar desde esta carpeta:
+python -B src/main.py programas/11OperacionesBasicas.az
+python -B src/main.py programas/15FuncionesYEntrada.az
+
+EJECUTAR MÁS FÁCIL
+En VS Code abre la carpeta AzCode y un archivo .az.
+Pulsa el botón ▶ Ejecutar archivo .az, arriba a la derecha.
+Escribe las respuestas de ler en la terminal que se abre.
+También puedes usar clic derecho en un .az: Ejecutar archivo .az.
+
+Sin VS Code, elige un programa de una lista:
+python -B ExtrasAI/runner.py
+O indica directamente cuál ejecutar:
+python -B ExtrasAI/runner.py programas/21Calculadora.az
+
+PROGRAMAS EN ORDEN: DEL MÁS SIMPLE AL MÁS COMPLETO
+Consulta también instrucciones/ORDEN_PROGRAMAS.txt.
+01HolaMundo.az: Mostrar un mensaje en consola.
+02Suma.az: Sumar dos números y guardar el resultado.
+03Resta.az: Restar dos números.
+04Multiplicacion.az: Multiplicar dos números.
+05Division.az: Dividir dos números.
+06Promedio.az: Combinar sumas, paréntesis y división.
+07Potencia.az: Calcular una potencia con potencia y **.
+08Saludo.az: Leer tu nombre y mostrar un saludo.
+09EntradaDeTexto.az: Practicar la lectura de texto con otro saludo.
+10Raiz.az: Leer un número y calcular su raíz cuadrada.
+11OperacionesBasicas.az: Combinar variables, mensajes y varias operaciones.
+12OperacionesDecimales.az: Practicar varias operaciones con decimales.
+13Booleanos.az: Comparar valores y usar verdadeiro, falso y nao.
+14FuncionDoble.az: Crear y llamar una función de una expresión.
+15FuncionesYEntrada.az: Combinar funciones, entrada de datos y booleanos.
+16ContadorPara.az: Repetir una instrucción del 1 al 5 con para.
+17SumaAcumulada.az: Cambiar un total en cada vuelta de un ciclo.
+18TablaMultiplicar.az: Leer un número y repetir para mostrar su tabla.
+19ContadorMientras.az: Repetir con enquanto y actualizar un contador.
+20Opciones.az: Elegir una acción con escolha, caso y padrao.
+21Calculadora.az: Combinar entradas y elecciones; evitar dividir entre cero.
+22MenuRepetido.az: Combinar un ciclo, opciones y un booleano para salir.
+
+En 21Calculadora.az escribe 4, luego 8 y luego 2: muestra División: 4.0.
+Si eliges dividir entre cero, muestra un aviso y termina sin fallar.
+
+Todo programa empieza y termina así:
+programa Ejemplo;
+inicio
+    escrever("Hola");
+fim
+
+Los siguientes ejemplos van entre inicio y fim.
+Cada instrucción termina con ;
+
+1. GUARDAR DATOS
+numero edad = 20;
+texto nombre = "Antonio";
+booleano estudiante = verdadeiro;
+booleano terminado = falso;
+
+2. MOSTRAR EN CONSOLA
+escrever("Hola");
+escrever("Edad: " + edad);
+escrever(estudiante);
+Los booleanos se muestran como verdadeiro o falso.
+
+3. ESCRIBIR UNA RESPUESTA EN LA CONSOLA
+texto ciudad = ler("Tu ciudad: ");
+numero cantidad = ler("Cantidad: ");
+booleano activo = ler("Activo: verdadeiro o falso: ");
+ler recibe lo que escribes y pulsas con Enter.
+numero convierte la respuesta a número. Usa punto para decimales.
+booleano acepta verdadeiro o falso.
+
+También puedes declarar primero y leer después:
+numero valor;
+ler(valor);
+escrever(raiz(valor));
+
+numero comienza en 0, texto en "" y booleano en falso.
+ler(valor) pide un dato y lo guarda en una variable ya declarada.
+Convierte la entrada según su tipo. Un número debe ser válido y
+un booleano debe escribirse como verdadeiro o falso.
+
+4. HACER CUENTAS
+escrever(8 + 2);           # suma: 10
+escrever(8 - 2);           # resta: 6
+escrever(8 * 2);           # multiplicación: 16
+escrever(8 / 2);           # división: 4.0
+escrever(10 % 3);          # resto: 1
+escrever(2 ** 3);          # potencia: 8
+escrever(potencia(2, 3));  # también potencia: 8
+escrever(raiz(25));        # raíz cuadrada: 5.0
+escrever((2 + 3) * 4);     # paréntesis: 20
+escrever(-5 + 2);          # negativo: -3
+raiz trabaja con números mayores o iguales a cero.
+
+¿CÓMO LO HACE POR DENTRO?
+raiz(25): el intérprete reconoce una llamada y usa 25 ** 0.5 sin importar math.
+potencia(2, 3): reconoce una llamada y usa operator.pow(2, 3).
+2 ** 3: reconoce una operación ast.Pow y usa la misma función pow.
+ler("Edad: "): reconoce una llamada y usa input para esperar tu respuesta.
+ler devuelve texto. Al declararlo como numero se convierte con float.
+Por ejemplo, la respuesta "20" se guarda como 20.0.
+
+La biblioteca ast organiza cada expresión en un árbol.
+No hace la cuenta sola: resolver recorre sus partes y calcula.
+En 2 + 3 * 4 resuelve primero 3 * 4 y luego suma 2: resultado 14.
+En raiz(25) el nodo padre es una llamada; su hijo es el número 25.
+En 2 ** 3 el nodo padre es una operación; sus hijos son 2 y 3.
+
+5. COMPARAR Y USAR BOOLEANOS
+booleano mayor = edad >= 18;
+escrever(edad == 20);       # igual
+escrever(edad != 20);       # diferente
+escrever(edad < 30);        # menor
+escrever(edad > 10);        # mayor
+escrever(edad <= 20);       # menor o igual
+escrever(edad >= 20);       # mayor o igual
+escrever(mayor e estudiante);  # ambos verdaderos
+escrever(mayor ou estudiante); # al menos uno verdadero
+escrever(nao estudiante);      # invertir el booleano
+
+6. CREAR FUNCIONES SENCILLAS
+funcao doble(valor) = valor * 2;
+funcao sumar(primero, segundo) = primero + segundo;
+escrever(doble(5));       # 10
+escrever(sumar(3, 4));    # 7
+numero resultado = doble(8);
+
+Una función tiene un nombre, parámetros entre paréntesis y una
+expresión después del igual. Esa expresión es el resultado.
+Declárala antes de llamarla. Puede usar funciones declaradas y
+variables disponibles. Sus parámetros no cambian las variables
+del programa. No tiene bloques ni una instrucción de retorno.
+
+7. COMENTARIOS
+# Esta línea explica algo, pero no se ejecuta.
+
+ERRORES
+Se muestra un mensaje corto y el programa se detiene.
+Revisa nombres, ;, paréntesis y tipos. No dividas entre cero.
+No declares el mismo nombre dos veces.
+
+CÓMO ESTÁ CONECTADO
+src/main.py lee el archivo.
+src/lexico.py reconoce sus elementos.
+src/sintactico.py organiza sus instrucciones.
+src/interprete.py calcula y ejecuta.
+
+TODAVÍA NO TIENE
+Condiciones se/senao, funciones con varias instrucciones e interfaz gráfica.
+Los ciclos, la selección de opciones y las reasignaciones ya funcionan.
+El intérprete no necesita instalar paquetes.
+
+CARPETAS
+programas: ejemplos .az.
+instrucciones: guías TXT.
+Ayuda: explicaciones y presentación HTML.
+src: código Python.
+imagenes: logos originales de AzCode y de la UNAP.
+ExtrasAI: runner, extensión de VS Code, recursos y herramientas de ayuda.
+
+AYUDAS
+Ayuda/AzCode_Como_Funciona_Presentacion.html muestra el recorrido,
+raiz, potencia, ler y árboles que puedes resolver paso a paso.
+El fondo tiene lluvia de bits y un botón para pausarla.
+Ayuda/EXPLICACION_CODIGO.html explica las líneas no vacías y también
+las bibliotecas y funciones que aparecen en cada línea.
+
+También puedes ejecutar python -B src/main.py sin indicar un archivo.
+Tu versión actual abre programas/01HolaMundo.az automáticamente.
+
+
+NUEVO: REPETIR Y ESCOGER
+Los ejemplos siguientes van entre inicio y fim.
+Las instrucciones llevan ;. Los bloques abren con { y cierran con }.
+
+WHILE EN PORTUGUÉS: enquanto
+numero contador = 1;
+enquanto (contador <= 5) {
+    escrever(contador);
+    contador = contador + 1;
+}
+Muestra 1, 2, 3, 4 y 5. El contador debe cambiar para que termine.
+Si un ciclo no termina, Ctrl+C detiene el programa.
+
+FOR EN PORTUGUÉS: para
+para contador de 1 ate 5 {
+    escrever(contador);
+}
+Incluye los límites 1 y 5. El contador avanza de uno en uno.
+Los límites deben ser enteros. De 5 a 1 no ejecuta ninguna vuelta.
+El contador se crea automáticamente y queda con su último valor.
+
+CAMBIAR UNA VARIABLE
+numero total = 0;
+total = total + 5;
+La variable debe estar declarada y conserva su tipo.
+Declara las variables antes del ciclo; dentro cambia su valor.
+No vuelvas a declarar el mismo nombre en cada repetición.
+
+ESCOGER UNA OPCIÓN: escolha
+numero opcion = ler("Opción: ");
+escolha (opcion) {
+    caso 1:
+        escrever("Hola");
+    caso 2:
+        escrever(raiz(25));
+    padrao:
+        escrever("Otra opción");
+}
+Se ejecuta solo el primer caso que coincide. No necesita break.
+padrao es opcional y se usa si no coincide ninguno.
+Los casos pueden comparar números, texto o booleanos.
+Se pueden colocar ciclos y elecciones dentro de otros bloques.
+Es una selección de valores; no implementa patrones avanzados de Python.
+
+NUEVOS PROGRAMAS PARA PROBAR
+19ContadorMientras.az: cuenta del 1 al 5 usando enquanto.
+16ContadorPara.az: hace lo mismo usando para.
+18TablaMultiplicar.az: pide un número y muestra su tabla del 1 al 10.
+17SumaAcumulada.az: suma del 1 al 5 y muestra 15.
+20Opciones.az: menú de una sola elección.
+22MenuRepetido.az: menú que se repite hasta elegir 0.
+21Calculadora.az: elige suma, resta, producto o división con protección contra cero.
+
+RAÍZ SIN MATH
+raiz(25) devuelve 5.0 mediante 25 ** 0.5.
+raiz rechaza números negativos. Es un cálculo con decimales y puede
+presentar pequeñas diferencias de precisión, como otras cuentas decimales.

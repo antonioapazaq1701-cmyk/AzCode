@@ -1,0 +1,5 @@
+programa Division;
+inicio
+    numero resultado = 8 / 2;
+    escrever("División: " + resultado);
+fim

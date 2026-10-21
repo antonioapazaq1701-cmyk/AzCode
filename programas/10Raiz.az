@@ -1,0 +1,6 @@
+programa Raiz;
+inicio
+    numero valor = ler("Número no negativo: ");
+    numero resultado = raiz(valor);
+    escrever("Raíz cuadrada: " + resultado);
+fim

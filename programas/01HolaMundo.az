@@ -1,0 +1,4 @@
+programa Hola;
+inicio
+    escrever("Hola mundo");
+fim

@@ -1,0 +1,18 @@
+programa Menu;
+inicio
+    booleano continuar = verdadeiro;
+    numero opcion;
+    enquanto (continuar) {
+        escrever("1. Saludar | 0. Salir");
+        ler(opcion);
+        escolha (opcion) {
+            caso 1:
+                escrever("Hola mundo");
+            caso 0:
+                continuar = falso;
+            padrao:
+                escrever("Opción no válida");
+        }
+    }
+    escrever("Hasta luego");
+fim

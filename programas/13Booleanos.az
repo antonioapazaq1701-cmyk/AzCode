@@ -1,0 +1,7 @@
+programa Booleanos;
+inicio
+    numero edad = 20;
+    booleano mayor = edad >= 18;
+    escrever("¿Mayor de edad? " + mayor);
+    escrever("Lo contrario: " + (nao mayor));
+fim

@@ -1,0 +1,20 @@
+programa Segundo;
+inicio
+    numero edad = 20;
+    numero a = 41;
+    numero b = 10.5;
+    numero suma = a + b;
+    numero resta = a - b;
+    numero multiplicacion = a * b;
+    numero division = a / b;
+    texto nombre = "Antonio";
+
+    escrever("Bienvenido Humano");
+    escrever("Buenos días, " + nombre);
+    escrever("Tu edad es: " + edad);
+    escrever("Algunas operaciones:");
+    escrever("Suma: " + suma);
+    escrever("Resta: " + resta);
+    escrever("Multiplicación: " + multiplicacion);
+    escrever("División: " + division);
+fim

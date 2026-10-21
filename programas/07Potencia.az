@@ -1,0 +1,5 @@
+programa Potencia;
+inicio
+    escrever(potencia(2, 3));
+    escrever(2 ** 3);
+fim

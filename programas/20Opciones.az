@@ -1,0 +1,14 @@
+programa Opciones;
+inicio
+    escrever("1. Saludar");
+    escrever("2. Mostrar una raíz");
+    numero opcion = ler("Elige una opción: ");
+    escolha (opcion) {
+        caso 1:
+            escrever("Hola mundo");
+        caso 2:
+            escrever("Raíz de 25: " + raiz(25));
+        padrao:
+            escrever("Opción no válida");
+    }
+fim

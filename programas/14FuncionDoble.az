@@ -1,0 +1,5 @@
+programa Doble;
+inicio
+    funcao doble(valor) = valor * 2;
+    escrever(doble(5));
+fim

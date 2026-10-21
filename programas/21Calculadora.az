@@ -1,0 +1,24 @@
+programa Calculadora;
+inicio
+    escrever("1. Sumar | 2. Restar | 3. Multiplicar | 4. Dividir");
+    numero opcion = ler("Operación: ");
+    numero primero = ler("Primer número: ");
+    numero segundo = ler("Segundo número: ");
+    escolha (opcion) {
+        caso 1:
+            escrever("Suma: " + (primero + segundo));
+        caso 2:
+            escrever("Resta: " + (primero - segundo));
+        caso 3:
+            escrever("Multiplicación: " + (primero * segundo));
+        caso 4:
+            escolha (segundo) {
+                caso 0:
+                    escrever("No se puede dividir entre cero");
+                padrao:
+                    escrever("División: " + (primero / segundo));
+            }
+        padrao:
+            escrever("Operación no válida");
+    }
+fim

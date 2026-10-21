@@ -1,0 +1,8 @@
+programa Contador;
+inicio
+    numero contador = 1;
+    enquanto (contador <= 5) {
+        escrever(contador);
+        contador = contador + 1;
+    }
+fim
